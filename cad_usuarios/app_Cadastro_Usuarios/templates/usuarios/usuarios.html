@@ -1,22 +1,20 @@
 <div class="container"> 
     <table>
-        <tr>
-            <th> id </th> 
-            <th> nome </th> 
-            <th> idade </th>      
-        </tr>
-        {% for usuario in usuarios %}
-        <tr>
-            <td>
-                {{usuarios.id}}
-            </td>
-            <td>
-                {{usuarios.nome}}
-            </td>
-            <td>
-                {{usuarios.idade}}
-            </td>
-        </tr>      
-        {% endfor %}          
+        <thead>
+            <tr>
+                <th>ID</th> 
+                <th>Nome</th> 
+                <th>Idade</th>      
+            </tr>
+        </thead>
+        <tbody>
+            {% for usuario in usuarios %}
+            <tr>
+                <td>{{ usuario.id_usuario }}</td>
+                <td>{{ usuario.nome }}</td>
+                <td>{{ usuario.idade }}</td>
+            </tr>
+            {% endfor %}          
+        </tbody>
     </table>
 </div>
